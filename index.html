@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./lib/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>播放列表</h1>
+        <input type="text" placeholder="請輸入要搜尋的歌名" class="search"/>
+        <ul>
+            <li v-for="song in playlist">{{ song }}</li>
+        </ul>
+        <!-- render: 暗流, 新世紀的女兒, I Hear a Symphony
+        from index.js > const Playlist 的 object data
+        playlist: ['暗流', '新世紀的女兒', 'I Hear a Symphony']
+        然後 li 用 for in 呼叫出所有的資料內容，類似 react 的 map -->
+    </div>
+</body>
+<script src="./index.js"></script>
+<!-- <script src="https://unpkg.com/vue@3"></script> -->
+</html>
