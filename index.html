@@ -11,9 +11,9 @@
 <body>
     <div id="app">
         <h1>播放列表</h1>
-        <input type="text" placeholder="請輸入要搜尋的歌名" class="search"/>
+        <input type="text" placeholder="請輸入要搜尋的歌名" class="search" v-model="searchTerm"/>
         <ul>
-            <li v-for="song in playlist">{{ song }}</li>
+            <li v-for="song in filteredPlaylist">{{ song }}</li>
         </ul>
         <!-- render: 暗流, 新世紀的女兒, I Hear a Symphony
         from index.js > const Playlist 的 object data
